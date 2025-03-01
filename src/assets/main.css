@@ -1,0 +1,71 @@
+/* ── Design System ─────────────────────────────────────── */
+:root {
+  --ink:       #0d0f14;
+  --ink-soft:  #1a1d27;
+  --ink-muted: #252836;
+  --surface:   #1f2235;
+  --surface-2: #282c42;
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.13);
+
+  --sky:    #5b8af0;
+  --sky-lt: #7fa7ff;
+  --dawn:   #f07a5b;
+  --fog:    #a0aec0;
+  --fog-lt: #cbd5e0;
+  --snow:   #e8edf5;
+  --storm:  #8b5cf6;
+  --sun:    #f6c90e;
+  --rain:   #63b3ed;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --radius:   12px;
+  --radius-lg: 20px;
+  --shadow:   0 4px 24px rgba(0,0,0,.4);
+  --shadow-lg:0 8px 48px rgba(0,0,0,.5);
+
+  --ease-out: cubic-bezier(0.16,1,0.3,1);
+  --ease-in:  cubic-bezier(0.4,0,1,1);
+}
+
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--ink);
+  color: var(--snow);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--ink-muted); border-radius: 3px; }
+
+/* ── Utility ────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width:1px; height:1px;
+  padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
+}
+
+/* ── Page transitions ───────────────────────────────────── */
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s ease, transform .3s var(--ease-out);
+}
+.page-enter-from { opacity:0; transform:translateY(12px); }
+.page-leave-to   { opacity:0; transform:translateY(-8px); }
+
+/* ── Fade ───────────────────────────────────────────────── */
+.fade-enter-active, .fade-leave-active { transition: opacity .2s ease; }
+.fade-enter-from, .fade-leave-to       { opacity: 0; }
+
+/* ── Slide up ───────────────────────────────────────────── */
+.slide-up-enter-active { transition: all .4s var(--ease-out); }
+.slide-up-enter-from   { opacity:0; transform:translateY(24px); }
