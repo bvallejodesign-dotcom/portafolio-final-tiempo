@@ -13,7 +13,7 @@
 ## 🔗 Repositorio
 
 ```
-https://github.com/TU_USUARIO/weather-app
+https://github.com/bvallejodesign-dotcom/portafolio-final-tiempo
 ```
 
 ---
@@ -31,7 +31,7 @@ https://github.com/TU_USUARIO/weather-app
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/weather-app.git
+git clone https://github.com/bvallejodesign-dotcom/portafolio-final-tiempo
 cd weather-app
 
 # 2. Instalar dependencias
